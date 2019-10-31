@@ -1,12 +1,170 @@
 <!DOCTYPE html>
 <html lang="ru">
-  <head>
-    <meta charset="utf-8">
-    <title>HTML Academy: Седона</title>
-  </head>
-  <body>
+<head>
+  <meta charset="utf-8">
+  <link rel="stylesheet" type="text/css" href="css/style.css">
+  <link href="https://fonts.googleapis.com/css?family=PT+Sans:400,700&display=swap&subset=cyrillic" rel="stylesheet">
+  <title>HTML Academy: Седона</title>
+</head>
+<body>
+  <div class="container">
+    <header class="main-header">
+      <nav class="main-navigation">
+        <ul class="site-navigation">
+          <li class="site-navigation-item site-navigation-item-active">
+            <a href="#">Информация</a>
+          </li>
+          <li class="site-navigation-item">
+            <a href="#">Фото и видео</a>
+          </li>
+          <li class="site-navigation-item main-header-logo">
+            <a href="#">
+              <img src="img/sedona-logo.svg" width="138" height="70" alt="Логотип  «Седона»">
+            </a>
+          </li>
+          <li class="site-navigation-item">
+            <a href="#">Карта штата</a>
+          </li>
+          <li class="site-navigation-item">
+            <a href="hotels.html">Гостиницы</a>
+          </li>
+        </ul>
+      </nav>
+    </header>
+    <main>
+      <section class="promo">
+        <img src="img/welcome.png" width="459" height="353" alt="промо-текст">
+      </section>
+      <section class="benefits">
+        <div class="benefits-intro">
+          <h1>Седона — небольшой городок в Аризоне, заслуживающий большего!</h1>
+          <h2 class="visually-hidden">Достоинства Седоны</h2>
+          <p>Рассмотрим 5 причин, по которым Седона круче, чем гранд каньон!
+          </p>
+        </div>
+        <ul class="benefits-reason-list">
+          <li class="benefits-reason-item first">
+            <div class="content-city-bridge">
+              <h3>Настоящий городок</h3>
+              <p>— №1 —</p>
+              <p>Седона — не аттракцион для туристов, там течёт своя жизнь</p>
+            </div>
+          </li>
+          <li class="more">
+            <ul class="more-list">
+              <li class="more-item more-item-home">
+                <h4>Жилье</h4>
+                <p>Рекомендуем пожить в настоящем мотеле, всё как в кино!</p>
+              </li>
+              <li class="more-item more-item-food">
+                <h4>Еда</h4>
+                <p>Всегда заказывайте фирменный бургер,</p>
+                <span>вы не разочаруетесь</span>
+              </li>
+              <li class="more-item more-item-presents">
+                <h4>Сувениры</h4>
+                <p>Не только китайского, но и местного производства!</p>
+              </li>
+            </ul>
+          </li>
+          <li class="benefits-reason-item second">
+            <div class="content-city-bridge">
+              <!-- убрать брки, задать h3 максимальную ширину - для этого у h3
+                нужно задать класс. далее в коде тоже не использовать брки.- сделла не задавая класса и без спана все ок -->
+                <h3>Там есть мост дьявола </h3>
+                <!-- это не параграф, а спан -->
+                <p>— №2 —</p>
+                <p>Да, по нему можно пройти! Если конечно вы осмелитесь</p>
+              </div>
+            </li>
+            <li class="benefits-reason-item">
+              <h3>Небольшая площадь</h3>
+              <p>— №3 —</p>
+              <p>Все достопримечательности находятся очень близко</p>
+            </li>
+            <li class="benefits-reason-item">
+              <h3>Красивая дорога</h3>
+              <p>— №4 —</p>
+              <p>Ехать в Седону из Лас-Вегаса совсем не скучно!</p>
+            </li>
+            <li class="benefits-reason-item">
+              <h3>Мало туристов</h3>
+              <p>— №5 —</p>
+              <p>Большинство едет в гранд каньон и&nbsp;толпится там</p>
+            </li>
+          </ul>
+        </section>
+        <!-- Секция с формой -->
+        <section class="commercial-offer-modal">
+          <h4>Заинтересовались?</h4>
+          <p>Укажите предполагаемые даты поездки, </br>
+          и мы покажем вам лучшие предложения гостиниц в седоне</p>
+          <!-- Модальное окно  -->
+          <!-- 1/делаем кнопку открытия модального окна- тн кнопку управления> -->
+          <a href="#openmodal" class="modal-btn">Поиск гостиницы в Седоне</a>
+          <!-- 2/Размечаем тело модального окна-- -->
+          <form id="openmodal" class="modal-search-hotel-list modal-show" method="post" action="https://echo.htmlacademy.ru">
+            <label class="date-field">Дата заезда
+              <input class="date-field-item" type="datetime" name="arrival-date" placeholder="24 апреля 2017 года">
+            </label>
+            <label class="date-field">Дата выезда
+              <input class="date-field-item" type="datetime" name="departure-date" placeholder="4 июля 2017 года">
+            </label>
+            <div class="people">
+              <label class="people-list">Взрослые
+                <input class="people-list-number" type="type="number" name="adults" placeholder="0">
+                <a class="people-item" href="#"></a>
+              </label>
+              <label class="people-list">Дети
+                <input class="people-list-number" type="number" name="children" placeholder="0">
+                <a class="people-item" href="#"></a>
+              </label>
+            </div>
+            <button class="submit" type="submit">Найти</button>
+          </form>
+        </section>
+        <!--  Секция с картой  -->
+        <section class="map-sedona">
+        </section>
+      </main>
+      <footer class="footer">
+        <p>#WISITSEDONA</p>
+        <ul class="footer-list">
+          <li class="footer-list-item">
+           <a href="#">
+             <img src="img/icon-twitter.svg" width="18" height="19">
+           </a>
+         </li>
+         <li class="footer-list-item">
+          <a href="#">
+            <img src="img/icon-facebook.svg" width="13" height="24" alt="Логотип Фейсбук">
+          </a>
+        </li>
+      </li>
+      <li class="footer-list-item">
+        <a href="#">
+          <img src="img/icon-youtube.svg" width="21" height="17"
+          alt="Логотип Ютуб">
+        </a>
+      </li>
+    </ul>
+    <div class="footer-logohtmlacademy">
+      <p>website by</p>
+      <a href="https://htmlacademy.ru/">
+        <img src="img/logo-htmlacademy.png" width="116" height="40"
+        alt="Логотип ХТМЛ-академия">
+      </a>
+    </div>
+  </footer>
+  <script>
+ var popupButton = document.querySelector('.modal-btn');
+ var modalWindow = document.querySelector('.modal-search-hotel-list');
 
-    <p>Репозиторий создан для обучения на профессиональном онлайн‑курсе «<a href="https://htmlacademy.ru/intensive/htmlcss">HTML и CSS, уровень 1</a>».</p>
+ var onPopupClic = function () {
+  modalWindow.classList.toggle('modal-show');
+}
 
-  </body>
+popupButton.addEventListener('click', onPopupClic);
+</script>
+</body>
 </html>
